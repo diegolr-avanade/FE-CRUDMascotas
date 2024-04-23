@@ -41,11 +41,11 @@
         <!-- Acciones Column -->
         <ng-container matColumnDef="acciones">
             <th mat-header-cell *matHeaderCellDef>
-                <button class="agregar" mat-raised-button color="primary">Agregar</button>
+                <button routerLink="/agregarMascota" class="agregar" mat-raised-button color="primary">Agregar</button>
             </th>
             <td mat-cell *matCellDef="let element"> 
-                <mat-icon class="search" matTooltip="Ver mascota" fontIcon="search"></mat-icon>
-                <mat-icon class="edit" matTooltip="Editar mascota" fontIcon="edit"></mat-icon>
+                <mat-icon [routerLink]="['/verMascota', 1]" class="search" matTooltip="Ver mascota" fontIcon="search"></mat-icon>
+                <mat-icon [routerLink]="['/editarMascota', 1]"class="edit" matTooltip="Editar mascota" fontIcon="edit"></mat-icon>
                 <mat-icon class="delete" matTooltip="Borrar mascota" fontIcon="delete"></mat-icon>
             </td>
         </ng-container>
