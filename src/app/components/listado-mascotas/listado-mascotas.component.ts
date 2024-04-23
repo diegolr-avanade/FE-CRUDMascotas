@@ -21,7 +21,7 @@ const listMascotas: Mascota[] = [
   styleUrls: ['./listado-mascotas.component.css']
 })
 export class ListadoMascotasComponent implements OnInit, AfterViewInit {
-  displayedColumns: string[] = ['nombre', 'edad', 'raza', 'color', 'peso'];
+  displayedColumns: string[] = ['nombre', 'edad', 'raza', 'color', 'peso','acciones'];
   dataSource = new MatTableDataSource<Mascota>(listMascotas);
 
   applyFilter(event: Event) {
