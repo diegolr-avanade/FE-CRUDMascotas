@@ -11,10 +11,17 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatButtonModule} from '@angular/material/button';
 import{MatCardModule} from '@angular/material/card';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+
+// Componentes
+import { SpinnerComponent } from './spinner/spinner.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    SpinnerComponent
+  ],
   imports: [
     CommonModule,
     MatTableModule,
@@ -25,7 +32,9 @@ import{MatCardModule} from '@angular/material/card';
     MatIconModule,
     MatTooltipModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatSnackBarModule,
+    MatProgressBarModule
   ],
   exports: [
     CommonModule,
@@ -37,7 +46,10 @@ import{MatCardModule} from '@angular/material/card';
     MatIconModule,
     MatTooltipModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatSnackBarModule,
+    SpinnerComponent,
+    MatProgressBarModule
   ]
 })
 export class SharedModule { }
