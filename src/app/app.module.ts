@@ -12,13 +12,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // Modulos
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
+import { PaginaNoEncontradaComponent } from './components/pagina-no-encontrada/pagina-no-encontrada.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AgregarEditarMascotaComponent,
     ListadoMascotasComponent,
-    VerMascotaComponent
+    VerMascotaComponent,
+    PaginaNoEncontradaComponent
   ],
   imports: [
     BrowserModule,
