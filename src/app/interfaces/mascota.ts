@@ -5,5 +5,4 @@ export interface Mascota {
     raza: string,
     color: string,
     peso: number
-
 }
