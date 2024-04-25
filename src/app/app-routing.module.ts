@@ -11,6 +11,7 @@ const routes: Routes = [
 {path: '', redirectTo: 'listMascotas', pathMatch: 'full'},
 {path: 'listMascotas', component: ListadoMascotasComponent},
 {path: 'agregarMascota', component: AgregarEditarMascotaComponent},
+{path: 'editarMascota/:id', component: AgregarEditarMascotaComponent},
 {path: 'verMascota/:id', component: VerMascotaComponent},
 {path: '**', component: PaginaNoEncontradaComponent}
 
