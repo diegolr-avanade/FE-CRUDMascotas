@@ -46,14 +46,18 @@ export class ListadoMascotasComponent implements OnInit, AfterViewInit {
 
   eliminarMascota(id: number) {
     this.loading = true;
-
-    this._mascotaService.deleteMascota(id).subscribe(() => {
-      this.mensaje_exito();
-      this.loading = false;
-      this.obtenerMascotas();
-    }
-    )
-
+    this._mascotaService.getMascota(id).subscribe(mascota => {
+      if (confirm("¿Estás seguro de que quieres eliminar a " + mascota.nombre + "?\nEste cambio es irreversible.")) {
+        this._mascotaService.deleteMascota(id).subscribe(() => {
+          this.mensaje_exito();
+          this.loading = false;
+          this.obtenerMascotas();
+        })
+      }
+      else {
+        this.loading = false;
+      }
+    });
 
   }
 
